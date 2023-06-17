@@ -6,10 +6,9 @@ import {
   Box,
   HStack,
 } from "@chakra-ui/react";
-import ProfileArray from "./ProfileArray";
+import AboutJson from "../info/About.json"
 
 export default function About({ color }) {
-  const profile = ProfileArray();
     return (
       <>
         <Container maxW={"3xl"} id="about">
@@ -29,7 +28,7 @@ export default function About({ color }) {
               <Divider orientation="horizontal" />
             </Stack>
             <Text color={"gray.600"} fontSize={"xl"} px={4}>
-              {profile.about}
+              {AboutJson.description}
             </Text>
           </Stack>
         </Container>
