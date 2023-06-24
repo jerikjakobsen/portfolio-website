@@ -9,6 +9,7 @@ import {
 export default function Footer() {
   return (
     <Box
+      marginTop="auto"
       bg={useColorModeValue("gray.50", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
@@ -18,7 +19,7 @@ export default function Footer() {
         py={4}
         align="center"
       >
-        <Text>© 2023 Eldora Boo. All rights reserved</Text>
+        <Text>© 2023 John Jakobsen. All rights reserved</Text>
       </Container>
     </Box>
   );

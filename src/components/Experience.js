@@ -22,26 +22,13 @@ import {
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Fade } from "react-reveal";
 import { useState, useEffect } from "react";
-import ExperienceArray from "./ExperienceArray";
 import TagsArray from "./TagsArray";
+import experiences from "../info/Experience.json"
 
 export default function Experience({ color }) {
-  const experience = ExperienceArray();
-  const options = TagsArray("ExperienceTags");
-  const [selected, setSelected] = useState("");
-
-  useEffect(() => {
-    if (options.length > 0) {
-      setSelected(options[0].value);
-    }
-  }, [options]);
-  
-  const handleSelected = (value) => {
-    setSelected(value);
-  };
 
   return (
-    <>
+    <div style={{clear: "both", marginTop: "10px"}}>
       <Container maxW={"3xl"} id="experience">
         <Stack
           as={Box}
@@ -49,51 +36,30 @@ export default function Experience({ color }) {
           spacing={{ base: 8, md: 14 }}
           pb={{ base: 20, md: 36 }}
         >
-          <Stack align="center" direction="row" px={4}>
-            <HStack mx={4}>
-              <Text color={`${color}.400`} fontWeight={800}>
-                02
-              </Text>
-              <Text fontWeight={800}>Experience</Text>
-            </HStack>
-            <Divider orientation="horizontal" />
-          </Stack>
-          <Center px={4}>
-            <ButtonGroup variant="outline">
-              {options.map((option) => (
-                <Button
-                  colorScheme={selected === option.value ? `${color}` : "gray"}
-                  onClick={() => handleSelected(option.value)}
-                >
-                  {option.value}
-                </Button>
-              ))}
-            </ButtonGroup>
-          </Center>
           <Stack px={4} spacing={4}>
-            {experience
-              .filter((exp) => exp.tags.includes(selected))
+            {experiences
+              // .filter((exp) => exp.tags.includes(selected))
               .map((exp) => (
                 <Fade bottom>
                   <Card key={exp.company} size="sm">
                     <CardHeader>
                       <Flex justifyContent="space-between">
                         <HStack>
-                          <Image src={exp.image} h={50} />
+                          <Image src={exp.icon} h={75} w={75} />
                           <Box px={2} align="left">
                             <Text fontWeight={600}>{exp.company}</Text>
-                            <Text>{exp.position}</Text>
+                            <Text>{exp.role}</Text>
                           </Box>
                         </HStack>
                         <Text px={2} fontWeight={300}>
-                          {exp.duration}
+                          {exp.startTime + " - " + exp.endTime}
                         </Text>
                       </Flex>
                     </CardHeader>
                     <CardBody>
                       <Flex>
                         <List align="left" spacing={3}>
-                          {exp.listItems.map((item, index) => (
+                          {exp.description.map((item, index) => (
                             <ListItem key={index}>
                               <ListIcon
                                 boxSize={6}
@@ -106,7 +72,7 @@ export default function Experience({ color }) {
                         </List>
                       </Flex>
                     </CardBody>
-                    <CardFooter>
+                    {/* <CardFooter>
                       <HStack spacing={2}>
                         {exp.badges.map((badge) => (
                           <Badge
@@ -117,13 +83,13 @@ export default function Experience({ color }) {
                           </Badge>
                         ))}
                       </HStack>
-                    </CardFooter>
+                    </CardFooter> */}
                   </Card>
                 </Fade>
               ))}
           </Stack>
         </Stack>
       </Container>
-    </>
+    </ div>
   );
 }

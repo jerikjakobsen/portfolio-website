@@ -1,30 +1,20 @@
 import React from 'react';
 import './App.css';
 import Nav from './components/NavBar';
-import Header from './components/Hero';
-import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { Outlet } from "react-router-dom";
+import {Flex} from "@chakra-ui/react";
 
-function App() {
+function App(props) {
   // Available Colours:
   // blue, cyan, gray, green, orange, pink, purple, red, teal, yellow
-
-  // edit this variable to change the color theme
-  const color = "teal";
-
+  const {color} = props;
   return (
-    <>
+    <Flex direction="column" h="100vh">
       <Nav color={color} />
-      <Header color={color} />
-      <About color={color} />
-      <Experience color={color} />
-      <Projects color={color} />
-      <Contact color={color} />
-      <Footer />
-    </>
+      <Outlet color={color} />
+      <Footer/>
+    </ Flex>
   );
 }
 
