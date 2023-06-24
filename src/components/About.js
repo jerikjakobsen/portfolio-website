@@ -9,7 +9,6 @@ import {
   useColorModeValue,
   createIcon,
 } from "@chakra-ui/react";
-import ProfileArray from "./ProfileArray";
 
 export default function About({ color }) {
 
