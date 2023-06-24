@@ -1,15 +1,11 @@
 import {
-    Divider,
     Stack,
     Text,
-    Container,
     Card,
     CardBody,
     Image,
     Heading,
-    Badge,
     Link,
-    Center,
     HStack
   } from "@chakra-ui/react";
 

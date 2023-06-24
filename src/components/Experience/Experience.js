@@ -1,27 +1,9 @@
 import {
-  Divider,
   Stack,
-  Text,
   Container,
-  Box,
-  HStack,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Flex,
-  Badge,
-  Image,
-  List,
-  ListItem,
-  ListIcon,
-  Button,
-  ButtonGroup,
-  Center,
+  Box
 } from "@chakra-ui/react";
-import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Fade } from "react-reveal";
-import { useState, useEffect } from "react";
 import experiences from "../../info/Experience.json"
 import ExperienceCard from "./ExperienceCard"
 

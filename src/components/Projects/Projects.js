@@ -1,20 +1,6 @@
 import {
-  Divider,
   Stack,
-  Text,
   Container,
-  Box,
-  HStack,
-  Button,
-  ButtonGroup,
-  Card,
-  CardBody,
-  Image,
-  Heading,
-  SimpleGrid,
-  Badge,
-  Link,
-  Center,
 } from "@chakra-ui/react";
 
 import {
@@ -26,10 +12,6 @@ import { useState } from "react";
 import projects from "../../info/Projects.json"
 
 export default function Projects({ color }) {
-    const [selected, setSelected] = useState("All");
-    const handleSelected = (value) => {
-      setSelected(value);
-    };
     
   return (
     <>
