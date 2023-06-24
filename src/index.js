@@ -5,8 +5,8 @@ import './index.css';
 import App from './App';
 import theme from "./theme";
 import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
+import Experience from './components/Experience/Experience';
+import Projects from './components/Projects/Projects';
 import Contact from './components/Contact';
 import { ChakraProvider } from "@chakra-ui/react";
 import {

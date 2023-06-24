@@ -40,6 +40,7 @@ export default function Nav({ color }) {
       bg={useColorModeValue("gray.100", "gray.900")}
       px={4}
       padding="8px"
+      margin="0 0 16px 0"
       boxShadow={"base"}
       zIndex="sticky"
       as="header"
