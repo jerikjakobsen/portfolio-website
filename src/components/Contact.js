@@ -1,7 +1,6 @@
 import {
   Stack,
   Text,
-  Container,
   HStack,
   Heading,
   Center,

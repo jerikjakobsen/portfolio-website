@@ -10,13 +10,11 @@ import {
   createIcon,
 } from "@chakra-ui/react";
 
-import { Fade } from "react-reveal";
 
 export default function About({ color }) {
 
   return (
     <>
-      <Fade bottom>
         <Heading>
           <link
             href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
@@ -50,7 +48,6 @@ export default function About({ color }) {
             </Text>
           </Stack>
         </Container>
-      </Fade>
     </>
   );
 }
