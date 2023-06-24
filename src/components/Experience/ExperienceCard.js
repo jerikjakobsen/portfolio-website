@@ -23,14 +23,15 @@ import {
 
 export default function ExperienceCard(props) {
 
-    const {company,
+    const {
+        company,
         description, 
         icon, 
         role, 
         startTime, 
         endTime, 
         color
-    } = props;
+    } = props.experience;
 
     return (
         <Card key={company + role + startTime + endTime} size="sm">

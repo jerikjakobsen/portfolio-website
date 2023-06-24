@@ -39,10 +39,7 @@ export default function Projects({ color }) {
             {projects.map((project) => (
               <Fade bottom>
                 <ProjectCard 
-                title = {project.title}
-                img = {project.img}
-                description = {project.description}
-                link = {project.link} />
+                project={project} />
               </Fade>
             ))}
           </Stack>

@@ -10,10 +10,13 @@ import {
     Badge,
     Link,
     Center,
+    HStack
   } from "@chakra-ui/react";
 
+import {FaGithub} from "react-icons/fa";
+
 export function ProjectCard(props) {
-    const {title, img, description, link} = props;
+    const {title, img, description, link} = props.project;
     return (
     <Card
         key={title}
@@ -27,7 +30,8 @@ export function ProjectCard(props) {
           <CardBody align="left">
             <Heading size="md">{title}</Heading>
             <Text py={2}>{description}</Text>
-
+            <Link href={link.href}><HStack><FaGithub size={28} /><Text color="cyan">{link.title}</Text></HStack></Link>
+            
             {/* <HStack py={2}>
               {project.buttons.map((button) => (
                 <a key={button.text} href={button.href}>

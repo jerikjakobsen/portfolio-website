@@ -39,12 +39,7 @@ export default function Experience({ color }) {
               .map((exp) => (
                 <Fade bottom>
                   <ExperienceCard
-                    company = {exp.company}
-                    description = {exp.description}
-                    icon = {exp.icon}
-                    role = {exp.role}
-                    startTime = {exp.startTime}
-                    endTime = {exp.endTime}
+                    experience={exp}
                     color = {color}
                   />
                 </Fade>
