@@ -7,8 +7,6 @@ import {
   ProjectCard
 } from "./ProjectCard.js"
 
-import { Fade } from "react-reveal";
-import { useState } from "react";
 import projects from "../../info/Projects.json"
 
 export default function Projects({ color }) {
@@ -19,10 +17,11 @@ export default function Projects({ color }) {
 
           <Stack px={4} spacing={4} margin={"8px"}>
             {projects.map((project) => (
-              <Fade bottom>
+              
                 <ProjectCard 
-                project={project} />
-              </Fade>
+                project={project}
+                color={color} />
+              
             ))}
           </Stack>
       </Container>

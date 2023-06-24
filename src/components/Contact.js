@@ -1,12 +1,11 @@
 import {
-  Divider,
   Stack,
   Text,
   Container,
-  Box,
   HStack,
   Heading,
   Center,
+  Flex
 } from "@chakra-ui/react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import ContactJson from "../info/Contact.json";
@@ -15,43 +14,38 @@ export default function Contact({ color }) {
   
   return (
     <>
-      <Container maxW={"3xl"} id="contact">
-        <Stack
-          as={Box}
-          textAlign={"center"}
-          spacing={{ base: 8, md: 14 }}
-          pb={{ base: 20, md: 36 }}
+      <Flex
+      id="contact"
+      spacing={{ base: 8, md: 14 }} 
+      pb={{ base: 20, md: 36 }}
+      height="100%"
+      alignItems="center"
+      justifyContent="center"
+      >
+        <Stack 
+        spacing={4} 
+        maxW={"3xl"} 
+        textAlign={"center"}
         >
-          <Stack align="center" direction="row" p={4}>
-            <HStack mx={4}>
-              <Text color={`${color}.400`} fontWeight={800}>
-                04
-              </Text>
-              <Text fontWeight={800}>Contact</Text>
+          <Heading fontSize={"3xl"}>Contact Me Here</Heading>
+          <Text color={`${color}.500`} fontWeight={600} fontSize={"lg"} px={4}>
+            {ContactJson.email}
+          </Text>
+          <Center>
+            <HStack pt={4} spacing={4}>
+              <a href={ContactJson.linkedin} target="_blank">
+                <FaLinkedin size={28} />
+              </a>
+              <a href={ContactJson.github} target="_blank">
+                <FaGithub size={28} />
+              </a>
+              <a href={"mailto:" + ContactJson.email} target="_blank">
+                <FaEnvelope size={28} />
+              </a>
             </HStack>
-            <Divider orientation="horizontal" />
-          </Stack>
-          <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
-            <Heading fontSize={"3xl"}>Contact Me Here</Heading>
-            <Text color={`${color}.500`} fontWeight={600} fontSize={"lg"} px={4}>
-              {ContactJson.email}
-            </Text>
-            <Center>
-              <HStack pt={4} spacing={4}>
-                <a href={ContactJson.linkedin} target="_blank">
-                  <FaLinkedin size={28} />
-                </a>
-                <a href={ContactJson.github} target="_blank">
-                  <FaGithub size={28} />
-                </a>
-                <a href={"mailto:" + ContactJson.email} target="_blank">
-                  <FaEnvelope size={28} />
-                </a>
-              </HStack>
-            </Center>
-          </Stack>
+          </Center>
         </Stack>
-      </Container>
+      </Flex>
     </>
   );
 }

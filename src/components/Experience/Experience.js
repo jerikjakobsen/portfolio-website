@@ -3,7 +3,6 @@ import {
   Container,
   Box
 } from "@chakra-ui/react";
-import { Fade } from "react-reveal";
 import experiences from "../../info/Experience.json"
 import ExperienceCard from "./ExperienceCard"
 
@@ -19,12 +18,10 @@ export default function Experience({ color }) {
             pb={{ base: 20, md: 36 }}>
             {experiences
               .map((exp) => (
-                <Fade bottom>
                   <ExperienceCard
                     experience={exp}
                     color = {color}
                   />
-                </Fade>
               ))}
           </Stack>
       </Container>
