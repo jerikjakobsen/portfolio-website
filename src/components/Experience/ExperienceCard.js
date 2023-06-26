@@ -26,7 +26,7 @@ export default function ExperienceCard(props) {
     } = props.experience;
 
     return (
-        <Card key={company + role + startTime + endTime} size="sm">
+        <Card key={company + role + startTime + endTime} size="sm" margin={0}>
             <CardHeader>
                 <Flex justifyContent="space-between">
                 <HStack>

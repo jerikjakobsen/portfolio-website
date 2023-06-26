@@ -17,12 +17,19 @@ export default function Experience({ color }) {
             spacing={{ base: 8, md: 14 }}
             pb={{ base: 20, md: 36 }}>
             {experiences
-              .map((exp) => (
-                  <ExperienceCard
+              .flatMap((exp, i) => {
+                var group = [
+                  (<ExperienceCard
                     experience={exp}
                     color = {color}
-                  />
-              ))}
+                  />)
+                ]
+
+                if (i !== experiences.length - 1) {
+                  group.push((<div style={{height: "80px", borderLeft: "3px solid rgba(47,55,71)", width: "50%", alignSelf: "flex-end"}} />));
+                }
+                return group;
+              })}
           </Stack>
       </Container>
     </ div>
