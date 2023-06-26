@@ -12,7 +12,7 @@ import {
 import {FaGithub} from "react-icons/fa";
 
 export function ProjectCard(props) {
-    const {title, img, description, link} = props.project;
+    const {title, img, description, link, color} = props.project;
     return (
     <Card
         key={title}
@@ -21,13 +21,12 @@ export function ProjectCard(props) {
         }}
         overflow="hidden"
       >
-        {img === "" ? null : <Image objectFit="cover" w="100%" h={400} src={img} />}
+        {img === "" ? null : <Image objectFit="cover" w="100%" h="60%" src={img} />}
         <Stack>
           <CardBody align="left">
             <Heading size="md">{title}</Heading>
             <Text py={2}>{description}</Text>
             <Link href={link.href}><HStack><FaGithub size={28} /><Text color="cyan">{link.title}</Text></HStack></Link>
-            
             {/* <HStack py={2}>
               {project.buttons.map((button) => (
                 <a key={button.text} href={button.href}>

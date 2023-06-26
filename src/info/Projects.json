@@ -18,5 +18,16 @@
             "href": "https://github.com/jerikjakobsen/Keys",
             "icon": ""
         }
+    },
+    {
+        "img": "https://www.blugraphic.com/wp-content/uploads/2014/03/key-icon.jpg",
+        "title": "Keys",
+        "description": "Password Management App",
+        "link": {
+            "title": "Github",
+            "href": "https://github.com/jerikjakobsen/Keys",
+            "icon": ""
+        }
     }
+    
 ]

@@ -9,13 +9,13 @@ import ExperienceCard from "./ExperienceCard"
 export default function Experience({ color }) {
 
   return (
-    <div style={{clear: "both", marginTop: "10px"}}>
+    <div style={{clear: "both",}}>
       <Container maxW={"3xl"} id="experience">
           <Stack 
             as={Box}
             textAlign={"center"}
             spacing={{ base: 8, md: 14 }}
-            pb={{ base: 20, md: 36 }}>
+            my={20}>
             {experiences
               .flatMap((exp, i) => {
                 var group = [
