@@ -67,7 +67,12 @@ export default function Nav({ color }) {
                   Projects
                 </Button>
               </Link>
-              <Link to="contact">
+              <Link to="/resume">
+                <Button variant="ghost">
+                  Resume
+                </Button>
+              </Link>
+              <Link to="/contact">
                 <Button variant="ghost">
                   Contact
                 </Button>
@@ -106,6 +111,11 @@ export default function Nav({ color }) {
                   <Link to="/projects">
                     <Button variant="ghost">
                       Projects
+                    </Button>
+                  </Link>
+                  <Link to="/resume">
+                    <Button variant="ghost">
+                      Resume
                     </Button>
                   </Link>
                   <Link to="contact">

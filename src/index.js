@@ -8,6 +8,7 @@ import About from './components/About';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact';
+import Resume from './components/Resume';
 import { ChakraProvider } from "@chakra-ui/react";
 import {
   createBrowserRouter,
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact color={color} />,
       },
+      {
+        path: "/resume",
+        element: <Resume />
+      }
     ]
   },
 ]);
