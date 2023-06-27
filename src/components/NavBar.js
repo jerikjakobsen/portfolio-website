@@ -79,15 +79,6 @@ export default function Nav({ color }) {
               </Link>
             </>
           ) : (
-            <></>
-          )}
-          <Button onClick={toggleColorMode}>
-            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-          </Button>
-
-          {isLargerThan48 ? (
-            <></>
-          ) : (
             <>
               <Button
                 as={IconButton}
@@ -128,6 +119,9 @@ export default function Nav({ color }) {
               </Drawer>
             </>
           )}
+          <Button onClick={toggleColorMode}>
+            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          </Button>
         </Stack>
       </Flex>
     </Flex>
