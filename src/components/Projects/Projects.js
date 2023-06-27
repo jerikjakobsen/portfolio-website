@@ -16,7 +16,7 @@ export default function Projects({ color }) {
     <>
       <Container maxW={"4xl"} id="projects" my={20}>
 
-          <SimpleGrid minChildWidth={"325px"} columns={2} px={4} spacing={4} margin={"8px"}>
+          <SimpleGrid minChildWidth={"300px"} columns={2} px={4} spacing={4} margin={"8px"}>
             {projects.map((project) => (
               
                 <ProjectCard 
