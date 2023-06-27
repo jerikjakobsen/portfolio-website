@@ -4,11 +4,12 @@ import { ColorModeScript } from "@chakra-ui/react";
 import './index.css';
 import App from './App';
 import theme from "./theme";
+
 import About from './components/About';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact';
-import Resume from './components/Resume';
+import Resume from './components/Resume/Resume';
 import { ChakraProvider } from "@chakra-ui/react";
 import {
   createBrowserRouter,
@@ -48,9 +49,7 @@ const router = createBrowserRouter([
 
 root.render(
   <ChakraProvider theme={theme}>
-    <React.StrictMode>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <RouterProvider router={router} />
-    </React.StrictMode>
   </ChakraProvider>
 );
