@@ -11,7 +11,8 @@ import {
   IconButton,
   useMediaQuery,
   useDisclosure,
-  HStack
+  HStack,
+  Image
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { useState } from "react";
@@ -45,9 +46,12 @@ export default function Nav({ color }) {
       zIndex="sticky"
       as="header"
       alignItems={"center"}
-      justifyContent={"flex-end"}
+      justifyContent={"space-between"}
       w="100%"
     >
+      <a href={"/"}>
+        <Image src="./assets/logo.png" style={{width: "40px", height: "40px"}} />
+      </a>
       <Flex alignItems={"center"}>
         <Stack direction={"row"} spacing={7}>
           {isLargerThan48 ? (
