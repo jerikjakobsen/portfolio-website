@@ -2,6 +2,7 @@ import {
   Stack,
   Text,
   HStack,
+  VStack,
   Heading,
   Center,
   Flex
@@ -27,9 +28,13 @@ export default function Contact({ color }) {
         textAlign={"center"}
         >
           <Heading fontSize={"3xl"}>Contact Me Here</Heading>
-          <Text color={`${color}.500`} fontWeight={600} fontSize={"lg"} px={4}>
-            {ContactJson.email}
+          <VStack>
+          {ContactJson.emails.map(email => (
+            <Text color={`${color}.500`} fontWeight={600} fontSize={"lg"} px={4}>
+            <a href={`mailto:${email}`} target="_blank">{email}</a>
           </Text>
+          ))}
+          </VStack>
           <Center>
             <HStack pt={4} spacing={4}>
               <a href={ContactJson.linkedin} target="_blank">
@@ -37,9 +42,6 @@ export default function Contact({ color }) {
               </a>
               <a href={ContactJson.github} target="_blank">
                 <FaGithub size={28} />
-              </a>
-              <a href={"mailto:" + ContactJson.email} target="_blank">
-                <FaEnvelope size={28} />
               </a>
             </HStack>
           </Center>

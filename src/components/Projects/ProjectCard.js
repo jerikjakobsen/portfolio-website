@@ -3,16 +3,21 @@ import {
     Text,
     Card,
     CardBody,
-    Image,
     Heading,
     Link,
-    HStack
+    HStack,
+    VStack
   } from "@chakra-ui/react";
+
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 import {FaGithub} from "react-icons/fa";
 
+import './Project.css'
+
 export function ProjectCard(props) {
-    const {title, img, description, link, color} = props.project;
+    const {title, description, links, date} = props.project;
     return (
     <Card
         key={title}
@@ -21,33 +26,18 @@ export function ProjectCard(props) {
         }}
         overflow="hidden"
       >
-        {img === "" ? null : <Image objectFit="cover" w="100%" h="60%" src={img} />}
-        <Stack>
-          <CardBody align="left">
+        <CardBody align="left">
+          <Stack spacing="10px">
             <Heading size="md">{title}</Heading>
-            <Text py={2}>{description}</Text>
-            <Link href={link.href}><HStack><FaGithub size={28} /><Text color="cyan">{link.title}</Text></HStack></Link>
-            {/* <HStack py={2}>
-              {project.buttons.map((button) => (
-                <a key={button.text} href={button.href}>
-                  <Button color={`${color}.400`}>
-                    {button.text}
-                  </Button>
-                </a>
+            <Heading size="sm">{date}</Heading>
+            <ReactMarkdown  children={description} remarkPlugins={[remarkGfm]} />
+            <VStack spacing='10px' align='left' >
+              {links.map(link => (
+                <Link isExternal  href={link.href}><HStack><FaGithub size={28} /><Text color="cyan">{link.title}</Text></HStack></Link>
               ))}
-            </HStack>
-            <HStack pt={4} spacing={2}>
-              {project.badges.map((badge) => (
-                <Badge
-                  key={badge.text}
-                  colorScheme={badge.colorScheme}
-                >
-                  {badge.text}
-                </Badge>
-              ))}
-            </HStack> */}
-          </CardBody>
-        </Stack>
+            </VStack>
+          </Stack>
+        </CardBody>
       </Card>
       )
 }

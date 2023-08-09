@@ -10,6 +10,7 @@ import {
   createIcon,
 } from "@chakra-ui/react";
 
+import AboutJSON from '../info/About.json'
 
 export default function About({ color }) {
 
@@ -44,7 +45,7 @@ export default function About({ color }) {
               color={"gray.500"}
               fontSize={{ base: "lg", sm: "xl", md: "2xl" }}
             >
-              Looking for Software Engineering Opportunities
+              {AboutJSON.description}
             </Text>
           </Stack>
         </Container>

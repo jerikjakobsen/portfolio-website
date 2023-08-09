@@ -1,33 +1,41 @@
 [
     {
-        "img": "https://www.blugraphic.com/wp-content/uploads/2014/03/key-icon.jpg",
+        "img": "",
         "title": "Keys",
-        "description": "Password Management App",
-        "link": {
-            "title": "Github",
-            "link": "",
+        "date": "Jul 2022 - Present",
+        "description": "Keys is an iOS password management app. Users are able to store passwords and other sensitive data and access that data securely. Keys utilizes the Zero Trust framework to ensure user's data is kept secure.",
+        "links": [{
+            "title": "Github/Keys",
+            "href": "https://github.com/jerikjakobsen/Keys",
+            "icon": ""
+        },
+        {
+            "title": "Github/KDBX",
+            "href": "https://github.com/jerikjakobsen/kdbx",
             "icon": ""
         }
+    ]
+    },
+    {
+        "title": "Translator Extension App",
+        "date": "Mar 2023 - Present",
+        "description": "The translator Extension is a google chrome extension developed in react using Microsoft Azure's Speech Recognition API. Users can translate audio from videos to different languages on websites that do not offer subtitles in different translations.",
+        "links": [{
+            "title": "Github/translator-extension",
+            "href": "https://github.com/jerikjakobsen/translator-extension",
+            "icon": ""
+        }]
     },
     {
         "img": "https://www.blugraphic.com/wp-content/uploads/2014/03/key-icon.jpg",
-        "title": "Keys",
-        "description": "Password Management App",
-        "link": {
-            "title": "Github",
-            "href": "https://github.com/jerikjakobsen/Keys",
+        "title": "Campus Buddy",
+        "date": "Feb 2023 - June 2023",
+        "description": "Campus Buddy is an app on both iOS and Android that helps users connect with other students on their campus. It was written using flutter for the frontend and a mix of Node, Express, Python and Flask for the backend services.",
+        "links": [{
+            "title": "Github/CampusBuddy",
+            "href": "https://github.com/pegliang/CampusBuddy",
             "icon": ""
-        }
-    },
-    {
-        "img": "https://www.blugraphic.com/wp-content/uploads/2014/03/key-icon.jpg",
-        "title": "Keys",
-        "description": "Password Management App",
-        "link": {
-            "title": "Github",
-            "href": "https://github.com/jerikjakobsen/Keys",
-            "icon": ""
-        }
+        }]
     }
     
 ]
