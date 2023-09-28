@@ -13,7 +13,8 @@ import 'react-pdf/dist/esm/Page/TextLayer.css';
 import { Document, Page, pdfjs} from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-export default function PDFContainer() {
+export default function PDFContainer({branch}) {
+  console.log(branch)
   const [wrapperWidth, setWrapperWidth] = useState(0);
   const [wrapperHeight, setWrapperHeight] = useState(0);
   const [pageWidth, setPageWidth] = useState(0);
@@ -40,7 +41,7 @@ return (
     >
       {({ measureRef }) => (
         <div ref={measureRef} style={{ margin: "20px", width: "80%"}}>
-          <Document file="https://jerikjakobsen-resume-bucket.s3.amazonaws.com/resume.pdf" style={{maxWidth: "500px"}}>
+          <Document file={`https://jerikjakobsen-resume-bucket.s3.amazonaws.com/${branch}/resume.pdf`} style={{maxWidth: "500px"}}>
               <Page 
                   key="page"
                   pageNumber={1} 
