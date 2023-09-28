@@ -36,6 +36,42 @@
             "href": "https://github.com/pegliang/CampusBuddy",
             "icon": ""
         }]
+    },
+    {
+        "title": "Days on Market Predictor",
+        "date": "Oct 2022 - Nov 2022",
+        "description": "Developed a neural network and XGBoost model to predict the time a property would stay on the housing market using a data set of housing sales from across the U.S. Achieived an average error of 137 days using the Tensorflow neural network and 205 days using the XGBoost model.",
+        "links": [
+            {
+                "title": "Github/Days-on-Market-Predictor",
+                "href": "https://github.com/jerikjakobsen/Days-on-Market-Predictor",
+                "icon": ""
+            }
+        ]
+    },
+    {
+        "title": "Neural Network",
+        "date": "Oct 2022 - Nov 2022",
+        "description": "Created a neural network using Python and NumPy from scratch. Utilized back propagation and gradient descent to improve model performance and achieve a lower loss with training of the model.",
+        "links": [
+            {
+                "title": "Github/Neural-Network",
+                "href": "https://github.com/jerikjakobsen/Neural-Network",
+                "icon": ""
+            }
+        ]
+    },
+    {
+        "title": "Pathways",
+        "date": "Jul 2021 - Aug 2021",
+        "description": "Pathways is an iOS app written in Objective-C that allows users to keep track of their physical paths and save them along with notable landmarks along the way.",
+        "links": [
+            {
+                "title": "Github/Pathways",
+                "href": "https://github.com/jerikjakobsen/Pathways",
+                "icon": ""
+            }
+        ]
     }
     
 ]
