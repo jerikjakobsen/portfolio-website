@@ -1,27 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { ColorModeScript } from "@chakra-ui/react";
-import './index.css';
-import App from './App';
+import "./index.css";
+import App from "./App";
 import theme from "./theme";
 
-import About from './components/About';
-import Experience from './components/Experience/Experience';
-import Projects from './components/Projects/Projects';
-import Contact from './components/Contact';
-import Resume from './components/Resume/Resume';
+import About from "./components/About";
+import Experience from "./components/Experience/Experience";
+import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact";
+import Resume from "./components/Resume/Resume";
 import { ChakraProvider } from "@chakra-ui/react";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import NotFound from "./components/NotFound";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 const color = "teal";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App color={color} />,
+    errorElement: <NotFound color={color} />,
     children: [
       {
         path: "/",
@@ -39,17 +38,17 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact color={color} />,
       },
-      {
-        path: "/resume",
-        element: <Resume />
-      }
-    ]
+      // {
+      //   path: "/resume",
+      //   element: <Resume />
+      // }
+    ],
   },
 ]);
 
 root.render(
   <ChakraProvider theme={theme}>
-      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <RouterProvider router={router} />
-  </ChakraProvider>
+    <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+    <RouterProvider router={router} />
+  </ChakraProvider>,
 );

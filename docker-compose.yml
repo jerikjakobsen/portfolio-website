@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio_website
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/usr/src/portfolio-website
+      - /usr/src/portfolio-website/node_modules
+    environment:
+      - NODE_ENV=development

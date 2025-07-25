@@ -1,51 +1,76 @@
 [
-    {
-        "company": "Microsoft",
-        "role": "Data Science Fellow",
-        "icon": "./assets/microsoft_logo.png",
-        "startTime": "June 2023",
-        "endTime": "June 2023",
-        "description": [
-            "Selected as one of 12 students to participate in a paid Microsoft Research Data Science program from a pool of over 300 applicants",
-            "Used R and Bash to acquire, clean, and analyze datasets, as well as to develop and train machine learning models",
-            "Applied statistical techniques, data visualization, and evaluation metrics to evaluate the performance of predictive models",
-            "Collaborated with researchers from Microsoft Research to replicate and authenticate published research, identifying misleading findings and discovering source code flaws"
-        ]
-    },
-    {
-        "company": "Meta",
-        "role": "Software Engineering Intern",
-        "icon": "./assets/meta-logo.svg",
-        "startTime": "May 2022",
-        "endTime": "August 2022",
-        "description": [
-            "Reduced negative messaging interactions on the Instagram iOS app by 14% by collaborating with design and server teams to implement a feature using Objective-C",
-            "Improved user experience in iOS and Android by scoping implementation plans for future projects and partnering with cross-functional teams, including creating Objective-C prototypes in close collaboration with the designer",
-            "Enhanced test coverage of iOS Instagram App modules by 89% and supported the QA team by developing Objective-C unit tests and implementing end-to-end testing using Jest"
-        ]
-    },
-    {
-        "company": "Codepath",
-        "role": "Teaching Assistant",
-        "icon": "./assets/codepath.png",
-        "startTime": "Jan 2021",
-        "endTime": "Nov 2022",
-        "description": [
-            "Taught an introduction of programming full stack iOS Applications to a class of 20+ students resulting in a 96% completion rate",
-            "Lead breakout room sessions with students to assist with 8 student group projects",
-            "Provided Q&A sessions to help students with general questions on programming and iOS Development"
-        ]
-    },
-    {
-        "company": "Meta",
-        "role": "Facebook University Intern",
-        "icon": "./assets/meta-logo.svg",
-        "startTime": "Jun 2021",
-        "endTime": "Aug 2021",
-        "description": [
-            "Worked as a full stack iOS application developer, utilizing the MVC design pattern for interface creation and implementation",
-            "Developed user path visualization using Objective-C and iOS Google Maps SDK, with Parse as the backend, enabling users to track and analyze their routes for improved navigation and planning",
-            "Streamlined data storage and accelerated load times for users by implementing a custom algorithm that optimized user path storage and performance, eliminating up to 60% of redundant points for each user path"
-        ]
-    }
+  {
+    "company": "Capital One",
+    "role": "Software Engineer Intern",
+    "icon": "./assets/capitalone-logo.png",
+    "startTime": "June 2025",
+    "endTime": "August 2025",
+    "description": [
+      "Developed and tested scalable backend services using NestJS, TypeScript, and Jest",
+      "Integrated Redis as a caching layer to store third-party API responses, significantly reducing redundant requests, cutting API usage costs, and improving average response times by up to 30 seconds per call, resulting in faster user experiences and lower infrastructure overhead",
+      "Enhanced data consistency and accuracy by implementing Levenshtein-based matching and delivering real-time results to the frontend via Web Sockets",
+      "Utilized React to display real-time data integrity checks by subscribing to backend updates via Pusher, ensuring MySQL database consistency and reliability"
+    ]
+  },
+  {
+    "company": "City University of New York",
+    "role": "DevSecOps Engineer",
+    "icon": "./assets/cuny-logo.png",
+    "startTime": "January 2025",
+    "endTime": "Current",
+    "description": [
+      "Streamlined the management and automation of over 200+ Red Hat VMs by migrating configuration profiles from Ansible to Puppet, enhancing modularity, scalability, and maintainability",
+      "Managed LVM-based storage and vSphere infrastructure supporting 20+ teams across CUNY",
+      "Deployed Python/Flask web applications backed by PostgreSQL on virtual machine servers for approximately 240,000 users, working closely with the application and network teams"
+    ]
+  },
+  {
+    "company": "Microsoft",
+    "role": "Data Science Fellow",
+    "icon": "./assets/microsoft_logo.png",
+    "startTime": "June 2023",
+    "endTime": "June 2023",
+    "description": [
+      "Selected as one of 12 students to participate in a paid Microsoft Research Data Science program from a pool of over 300 applicants",
+      "Used R and Bash to acquire, clean, and analyze datasets, as well as to develop and train machine learning models",
+      "Applied statistical techniques, data visualization, and evaluation metrics to evaluate the performance of predictive models",
+      "Collaborated with researchers from Microsoft Research to replicate and authenticate published research, identifying misleading findings and discovering source code flaws"
+    ]
+  },
+  {
+    "company": "Meta",
+    "role": "Software Engineering Intern",
+    "icon": "./assets/meta-logo.svg",
+    "startTime": "May 2022",
+    "endTime": "August 2022",
+    "description": [
+      "Reduced negative messaging interactions on the Instagram iOS app by 14% by collaborating with design and server teams to implement a feature using Objective-C",
+      "Improved user experience by developing a feature that proactively prevented disallowed actions on the frontend, reducing backend server load and enhancing UI responsiveness",
+      "Improved test coverage of an iOS Instagram App module by up to 89% and supported the QA team by developing Objective-C unit tests and implementing end-to-end testing using Jest and Javascript"
+    ]
+  },
+  {
+    "company": "Codepath",
+    "role": "Teaching Assistant",
+    "icon": "./assets/codepath.png",
+    "startTime": "Jan 2021",
+    "endTime": "Nov 2022",
+    "description": [
+      "Taught an introduction of programming full stack iOS Applications to a class of 20+ students resulting in a 96% completion rate",
+      "Lead breakout room sessions with students to assist with 8 student group projects",
+      "Provided Q&A sessions to help students with general questions on programming and iOS Development"
+    ]
+  },
+  {
+    "company": "Meta",
+    "role": "Facebook University Intern",
+    "icon": "./assets/meta-logo.svg",
+    "startTime": "Jun 2021",
+    "endTime": "Aug 2021",
+    "description": [
+      "Worked as a full stack iOS application developer, utilizing the MVC design pattern for interface creation and implementation",
+      "Developed user path visualization using Objective-C and iOS Google Maps SDK, with Parse as the backend, enabling users to track and analyze their routes for improved navigation and planning",
+      "Streamlined data storage and accelerated load times for users by implementing a custom algorithm that optimized user path storage and performance, eliminating up to 60% of redundant points for each user path"
+    ]
+  }
 ]
